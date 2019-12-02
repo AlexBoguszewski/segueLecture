@@ -9,10 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var lable1: UILabel!
+    @IBOutlet var screenEdgePanGesture: UIScreenEdgePanGestureRecognizer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { (timer) in self.lable1.alpha = 1
+            if screenEdgePanGesture
+        }
     }
 
 
