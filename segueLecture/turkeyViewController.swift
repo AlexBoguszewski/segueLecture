@@ -6,18 +6,8 @@
 //  Copyright © 2019 alex boguszewski. All rights reserved.
 //
 
-import UIKit
-class turkeyViewController: UIViewController {
-    var nameOfTurkey = "tom"
-    
-}
-class turkeyViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        navigationItem.title = nameOfTurkey
-        // Do any additional setup after loading the view.
-    }
+    
     
 
     /*
@@ -30,4 +20,4 @@ class turkeyViewController: UIViewController {
     }
     */
 
-}
+

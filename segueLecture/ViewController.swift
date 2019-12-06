@@ -9,16 +9,31 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var lable1: UILabel!
-    @IBOutlet var screenEdgePanGesture: UIScreenEdgePanGestureRecognizer!
+    
+    @IBOutlet weak var textField1: UITextField!
+    var myTimer: Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { (timer) in self.lable1.alpha = 1
-            if screenEdgePanGesture
+        textField1.alpha = 0
+        myTimer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { (timer) in self.textField1.alpha = 1
         }
     }
-
-
+    
+    var meme: String = ""
+    let randomInt = Int.random(in: 1...100)
+    
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        myTimer.invalidate()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        textField1.alpha = 0
+        myTimer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { (Timer) in self.textField1.alpha = 1
+            
+        }
+    }
 }
+
 
